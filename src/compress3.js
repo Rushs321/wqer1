@@ -7,8 +7,6 @@ function compress(req, res, input) {
     
     // Create a sharp pipeline to process the image
     const pipeline = sharp()
-         // Auto-rotate using EXIF Orientation tag
-         // Resize the image to a height of 200 pixels
         .toFormat(format, {
             quality: req.params.quality,
             progressive: true,
